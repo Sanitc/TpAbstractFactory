@@ -1,6 +1,9 @@
 package fr.mds.tpabstractfactory.classes;
 
-public class Square implements Shape {
+import fr.mds.tpabstractfactory.interfaces.Item;
+import fr.mds.tpabstractfactory.interfaces.Shape;
+
+public class Square implements Shape, Item {
 
 	public static final String SQUARE = "Square";
 	
@@ -8,6 +11,12 @@ public class Square implements Shape {
 	public void draw() {
 		// TODO Auto-generated method stub
 		System.out.println(SQUARE);
+	}
+
+	@Override
+	public String getName() {
+		
+		return SQUARE;
 	}
 
 }

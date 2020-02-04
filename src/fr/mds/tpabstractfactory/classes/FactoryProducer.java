@@ -1,5 +1,7 @@
 package fr.mds.tpabstractfactory.classes;
 
+import fr.mds.tpabstractfactory.interfaces.Item;
+
 public class FactoryProducer {
 	
 	public static AbstractFactory getFactory(String uneFactory) {
@@ -11,5 +13,16 @@ public class FactoryProducer {
 		}else {
 			return null;
 		}			
+	}
+
+	public static Item getItem(String unItem) {
+		
+		Item item = (Item)new ShapeFactory().getShape(unItem);
+		
+		if(item == null) {
+			item = (Item) new ColorFactory().getColor(unItem);
+			return item;
+		}
+		return item;
 	}
 }

@@ -1,8 +1,14 @@
 package fr.mds.tpabstractfactory.classes;
 
+import fr.mds.tpabstractfactory.interfaces.Color;
+import fr.mds.tpabstractfactory.interfaces.Item;
+import fr.mds.tpabstractfactory.interfaces.Shape;
+
 public class AbstractFactoryPatternDemo {
 	public static void main(String[] args) {
 	
+		System.err.println("Exercice 1:");
+		
 		// get shape factory  
 		AbstractFactory shapeFactory = FactoryProducer.getFactory(ShapeFactory.SHAPE); 
 	
@@ -50,5 +56,28 @@ public class AbstractFactoryPatternDemo {
 		
 		// call draw method of Shape Circle
 		myShape.draw(); 
+		
+		System.out.println("");
+		System.err.println("Exercice 2:");
+		
+		 //get directly an item with factory auto selecting
+		Item item = FactoryProducer.getItem(AllObjects.BLUE);  
+		System.out.println("this is a " + item.getName()); 
+		
+		item = FactoryProducer.getItem(AllObjects.GREEN);  
+		System.out.println("this is a " + item.getName());  
+		
+		item = FactoryProducer.getItem(AllObjects.RED);  
+		System.out.println("this is a " + item.getName());   
+		
+		item = FactoryProducer.getItem(AllObjects.SQUARE);    
+		System.out.println("this is a " + item.getName());  
+		
+		item = FactoryProducer.getItem(AllObjects.RECTANGLE);  
+		System.out.println("this is a " + item.getName());  
+		
+		item = FactoryProducer.getItem(AllObjects.CIRCLE);	
+		System.out.println("this is a " + item.getName());
+
 	}
 }

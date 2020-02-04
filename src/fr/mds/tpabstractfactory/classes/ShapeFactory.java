@@ -1,5 +1,8 @@
 package fr.mds.tpabstractfactory.classes;
 
+import fr.mds.tpabstractfactory.interfaces.Color;
+import fr.mds.tpabstractfactory.interfaces.Shape;
+
 public class ShapeFactory extends AbstractFactory {
 	
 	public static final String SHAPE = "Shape";

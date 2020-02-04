@@ -1,6 +1,9 @@
 package fr.mds.tpabstractfactory.classes;
 
-public class Circle implements Shape {
+import fr.mds.tpabstractfactory.interfaces.Item;
+import fr.mds.tpabstractfactory.interfaces.Shape;
+
+public class Circle implements Shape, Item {
 
 	public static final String CIRCLE = "Circle";
 
@@ -8,6 +11,12 @@ public class Circle implements Shape {
 	public void draw() {
 		// TODO Auto-generated method stub
 		System.out.println(CIRCLE);
+	}
+
+	@Override
+	public String getName() {
+		
+		return CIRCLE;
 	}
 
 }
