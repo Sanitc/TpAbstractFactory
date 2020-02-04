@@ -21,7 +21,6 @@ public class FactoryProducer {
 		
 		if(item == null) {
 			item = (Item) new ColorFactory().getColor(unItem);
-			return item;
 		}
 		return item;
 	}

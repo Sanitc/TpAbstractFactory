@@ -7,7 +7,7 @@ import fr.mds.tpabstractfactory.interfaces.Shape;
 public class AbstractFactoryPatternDemo {
 	public static void main(String[] args) {
 	
-		System.err.println("Exercice 1:");
+		System.out.println("--Exercice 1--");
 		
 		// get shape factory  
 		AbstractFactory shapeFactory = FactoryProducer.getFactory(ShapeFactory.SHAPE); 
@@ -58,7 +58,7 @@ public class AbstractFactoryPatternDemo {
 		myShape.draw(); 
 		
 		System.out.println("");
-		System.err.println("Exercice 2:");
+		System.out.println("--Exercice 2--");
 		
 		 //get directly an item with factory auto selecting
 		Item item = FactoryProducer.getItem(AllObjects.BLUE);  
